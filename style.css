@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(228, 228, 228);
+}
+
+section{
+    margin: 40px auto;
+}
+
+.card-img-overlay{
+    align-content: center;
+}
+.hero img{
+    filter: brightness(50%);
+}
+
+.card{
+    margin: 10px 0px;
+    left: 0;
+    right: 0;
+}
+
+#productos .row{
+    justify-content: center !important;
+    margin: 0px auto;
+}
+#productos .row .col-xl-3{
+    justify-self: center;
+    margin:0px 0px;
+}
+
+.ac{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.precio{
+    font-size: 20px;
+}
+
+#nosotros{
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+#nosotros img{
+    width: 100%;
+}
+
+.redes{
+    font-size: 25px;
+}
+
+@media (max-width: 760px){
+    .hero-content{
+        top: 5em;
+    }
+}
+

@@ -1,11 +1,287 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>🎮 GameCenter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <!-- BARRA DE NAVEGACION navbar dark + Offcanvas dark -->
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">🎮 GameCenter</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#hero">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#productos">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#nosotros">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contacto">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- SECCION HERO card Image overlays -->
+        <section class="hero" id="hero">
+            <div class="card text-bg-dark">
+                <img src="3c_youtube-cover-photo_clean@1x-1.png" class="card-img" alt="...">
+                <div class="card-img-overlay text-center">
+                    <h5 class="card-title">GameCenter</h5>
+                    <p class="card-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <button type="button" class="btn btn-outline-light">Ver mas</button>
+                </div>
+            </div>
+        </section>
+        <!-- PRODUCTOS cards, grid cards, button outline succes-->
+        <section class="container-xxl" id="productos">
+            <br>
+            <h2>Productos</h2>
+            <hr>
+            <div
+                class="row justify-content-center align-items-center row-cols-1 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card h-100 mx-auto" style="width: 18rem;">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_744066-MLA100664769080_122025-O.webp"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit gamer 4 en 1</h5>
+                            <p class="card-text">
+                                Mouse, teclado, pad y auriculares gamer
+                            </p>
+                            <div class="ac">
+                                <div class="precio">
+                                    $53.000
+                                </div>
+                                <a href="#" class="btn btn-outline-success">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 mx-auto" style="width: 18rem;">
+                        <img src="https://cdn.qloud.ar/318/24-07-2026-12-07-43_PCGAMER13180HZ.webp" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">PC Gamer Ryzen 7</h5>
+                            <p class="card-text">
+                                Pc Gamer Ryzen 7 7800x3d + Rtx 3080 Ti 12gb AM5 + Monitor Teros
+                            </p>
+                            <div class="ac">
+                                <div class="precio">
+                                    $2.600.000
+                                </div>
+                                <a href="#" class="btn btn-outline-success">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 mx-auto" style="width: 18rem;">
+                        <img src="https://cdn.v2.tiendanegocio.com/gallery/21528/img_21528_hrcu7ynwmtf7tu6g.png?class=sm"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mouse Gamer</h5>
+                            <p class="card-text">
+                                Mouse Gamer
+                            </p>
+                            <div class="ac">
+                                <div class="precio">
+                                    $16.000
+                                </div>
+                                <a href="#" class="btn btn-outline-success">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 mx-auto" style="width: 18rem;">
+                        <img src="https://acdn-us.mitiendanube.com/stores/817/317/products/joystick-51-41977f90b01c8c81da15984709750861-480-0.webp"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Joystick ps4 inalambrico</h5>
+                            <p class="card-text">
+                                Joystick ps4 inalambrico doubleshock 4 modelo 2020
+                            </p>
+                            <div class="ac">
+                                <div class="precio">
+                                    $43.000
+                                </div>
+                                <a href="#" class="btn btn-outline-success">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 mx-auto" style="width: 18rem;">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_742302-MLA114812161072_082026-O.webp"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Auriculares Gamer</h5>
+                            <p class="card-text">
+                                Auriculares Gamer Kotion con microfono y luz LED
+                            </p>
+                            <div class="ac">
+                                <div class="precio">
+                                    $50.000
+                                </div>
+                                <a href="#" class="btn btn-outline-success">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 mx-auto" style="width: 18rem;">
+                        <img src="https://globalecom.ar/wp-content/uploads/2024/11/1.-MPADGAMER-RGB-80X30-768x768.png"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mouse pad Gamer</h5>
+                            <p class="card-text">
+                                Retro iluminado grande RGB
+                            </p>
+                            <div class="ac">
+                                <div class="precio">
+                                    $12.000
+                                </div>
+                                <a href="#" class="btn btn-outline-success">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- NOSOTROS grid-->
+        <section id="nosotros" class="container">
+            <h2>Sobre nosotros</h2>
+            <div class="row justify-content-center align-items-center g-2">
+                <div class="col-lg-8">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur sapiente minus eum eveniet
+                        dolor, esse expedita enim, minima repudiandae nemo earum! Nemo, impedit laborum voluptate at
+                        repellendus tenetur omnis quaerat.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus labore est et assumenda,
+                        corrupti accusamus veritatis fuga sit impedit quas enim obcaecati fugiat exercitationem quia
+                        nobis nam libero adipisci? Error?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque praesentium beatae commodi
+                        exercitationem, corporis, quasi at architecto fuga non ab officiis. Ducimus mollitia velit quo
+                        ipsum quidem provident laudantium expedita!
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://www.clarin.com/2015/03/24/SyWV7bK0Xx_312x240.jpg" alt="">
+                </div>
+            </div>
+
+        </section>
+        <!-- CONTACTO -->
+        <section id="contacto">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="card shadow">
+                            <div class="card-header">
+                                <h4 class="mb-0">Contacto</h4>
+                            </div>
+                            <div class="card-body">
+                                <form action="#">
+
+                                    <label for="nombre" class="form-label">Nombre completo</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre"
+                                        placeholder="Juan Pérez" required>
+
+                                    <label for="email" class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="ejemplo@correo.com" required>
+
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <input type="tel" class="form-control" id="telefono" name="telefono"
+                                        placeholder="+54 11 1234-5678" required>
+
+                                    <label for="motivo" class="form-label">Motivo de contacto</label>
+                                    <select class="form-select" id="motivo" name="motivo" required>
+                                        <option value="" selected disabled>Selecciona una opción...</option>
+                                        <option value="soporte">Soporte Técnico</option>
+                                        <option value="ventas">Ventas y Presupuestos</option>
+                                        <option value="sugerencia">Sugerencias</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+
+                                    <label for="mensaje" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4"
+                                        placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                    <br>
+
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-secondary">Enviar</button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container-fluid bg-dark text-white">
+        <div class="row justify-content-center align-items-center g-2 row-cols-1 row-cols-md-3">
+            <div class="col text-center">
+                <h2>GameCenter</h2>
+                <h6>2026</h6>
+            </div>
+            <div class="col">
+                <h4>
+                    Redes sociales
+                </h4>
+                <div class="redes">
+                    <i class="bi bi-linkedin"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-whatsapp"></i>
+                    <i class="bi bi-twitter-x"></i>
+                </div>
+            </div>
+            <div class="col">
+                <h4>Contacto</h4>
+                <p>
+                    gamecenter24@gmail.com
+                </p>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
