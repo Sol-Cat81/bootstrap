@@ -1,287 +1,542 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="coffee.svg" type="image/x-icon" />
+    <title>Coffe World</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎮 GameCenter</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
+  <body>
     <!-- BARRA DE NAVEGACION navbar dark + Offcanvas dark -->
     <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top ">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">🎮 GameCenter</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#hero">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#productos">Productos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#nosotros">Nosotros</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contacto">Contacto</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+      <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="#ffffff"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M80,56V24a8,8,0,0,1,16,0V56a8,8,0,0,1-16,0Zm40,8a8,8,0,0,0,8-8V24a8,8,0,0,0-16,0V56A8,8,0,0,0,120,64Zm32,0a8,8,0,0,0,8-8V24a8,8,0,0,0-16,0V56A8,8,0,0,0,152,64Zm96,56v8a40,40,0,0,1-37.51,39.91,96.59,96.59,0,0,1-27,40.09H208a8,8,0,0,1,0,16H32a8,8,0,0,1,0-16H56.54A96.3,96.3,0,0,1,24,136V88a8,8,0,0,1,8-8H208A40,40,0,0,1,248,120ZM200,96H40v40a80.27,80.27,0,0,0,45.12,72h69.76A80.27,80.27,0,0,0,200,136Zm32,24a24,24,0,0,0-16-22.62V136a95.78,95.78,0,0,1-1.2,15A24,24,0,0,0,232,128Z"
+              ></path>
+            </svg>
+            <span>Coffe World</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end text-bg-dark"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
             </div>
-        </nav>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#hero"
+                    >Inicio</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#recetas">Recetas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#productos">Productos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#nosotros">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <!-- SECCION HERO card Image overlays -->
-        <section class="hero" id="hero">
-            <div class="card text-bg-dark">
-                <img src="3c_youtube-cover-photo_clean@1x-1.png" class="card-img" alt="...">
-                <div class="card-img-overlay text-center">
-                    <h5 class="card-title">GameCenter</h5>
-                    <p class="card-text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                    <button type="button" class="btn btn-outline-light">Ver mas</button>
+      <!-- SECCION HERO card Image overlays -->
+      <section class="hero" id="hero">
+        <div class="card text-bg-dark">
+          <img
+            src="https://st4.depositphotos.com/1835807/22599/i/450/depositphotos_225991768-stock-photo-coffee-banner-collage-espresso-croissant.jpg"
+            class="card-img"
+            alt="..."
+          />
+          <div class="card-img-overlay text-center">
+            <h5 class="card-title">Coffe World</h5>
+            <p class="card-text">
+              Que mejor manera hay de empezar el dia que con un buen cafe?
+            </p>
+            <button type="button" class="btn btn-outline-light">Ver mas</button>
+          </div>
+        </div>
+      </section>
+      <!-- PRODUCTOS cards, grid cards, button outline succes-->
+      <section class="container-xxl" id="productos">
+        <br />
+        <h2>Productos</h2>
+        <hr />
+        <div
+          class="row justify-content-center align-items-center row-cols-1 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 g-4"
+        >
+          <div class="col">
+            <div class="card h-100 mx-auto" style="width: 18rem">
+              <img
+                src="https://www.lavirginia.com.ar/wp-content/uploads/2025/06/Sutil-e1751287813174.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Cafe - La virginia</h5>
+                <p class="card-text">Cafe tostado, molido 250g</p>
+                <div class="ac">
+                  <div class="precio">$4.000</div>
+                  <a href="#" class="btn btn-outline-success">Comprar</a>
                 </div>
+              </div>
             </div>
-        </section>
-        <!-- PRODUCTOS cards, grid cards, button outline succes-->
-        <section class="container-xxl" id="productos">
-            <br>
-            <h2>Productos</h2>
-            <hr>
+          </div>
+          <div class="col">
+            <div class="card h-100 mx-auto" style="width: 18rem">
+              <img
+                src="https://www.lavirginia.com.ar/wp-content/uploads/2025/06/cafe-tostado-1-e1751288710246.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Cafe - La virginia</h5>
+                <p class="card-text">Cafe tostado, intenso 250g</p>
+                <div class="ac">
+                  <div class="precio">$5.000</div>
+                  <a href="#" class="btn btn-outline-success">Comprar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 mx-auto" style="width: 18rem">
+              <img
+                src="https://capsulandia.com.ar/cdn/shop/files/capsulandia-nescafe-gold-alta-rica-100g-cafe-soluble-sin-azucar-1_grande.webp?v=1709522524"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Nescafe GOLD</h5>
+                <p class="card-text">
+                  Alta Rica 100g - Cafe Soluble SIN Azucar – Capsulandia
+                </p>
+                <div class="ac">
+                  <div class="precio">$16.000</div>
+                  <a href="#" class="btn btn-outline-success">Comprar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 mx-auto" style="width: 18rem">
+              <img
+                src="https://www.lavirginia.com.ar/wp-content/uploads/2022/01/LV-Espresso_500-e1731091106843.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Cafe - La virginia espreso</h5>
+                <p class="card-text">
+                  Tostado Espresso Molido 100% arábica 250g
+                </p>
+                <div class="ac">
+                  <div class="precio">$13.000</div>
+                  <a href="#" class="btn btn-outline-success">Comprar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 mx-auto" style="width: 18rem">
+              <img
+                src="https://shop.nestle.com.ar/cdn/shop/files/ActualizacionimageneswebShopNestle_HEROS-02.png?v=1771206326&width=1445"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Nescafe instantaneo</h5>
+                <p class="card-text">Gold Espresso - Frasco x100gr</p>
+                <div class="ac">
+                  <div class="precio">$13.000</div>
+                  <a href="#" class="btn btn-outline-success">Comprar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 mx-auto" style="width: 18rem">
+              <img
+                src="https://www.supermercadoseljamon.com/documents/10180/892067/20007076_G.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Cafe Marcilla</h5>
+                <p class="card-text">En grano mezcla gran aroma, 500g</p>
+                <div class="ac">
+                  <div class="precio">$12.000</div>
+                  <a href="#" class="btn btn-outline-success">Comprar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="recetas" class="container">
+        <h2>Recetas</h2>
+        <hr>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                Capuchino clásico
+              </button>
+            </h2>
             <div
-                class="row justify-content-center align-items-center row-cols-1 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 g-4">
-                <div class="col">
-                    <div class="card h-100 mx-auto" style="width: 18rem;">
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_744066-MLA100664769080_122025-O.webp"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Kit gamer 4 en 1</h5>
-                            <p class="card-text">
-                                Mouse, teclado, pad y auriculares gamer
-                            </p>
-                            <div class="ac">
-                                <div class="precio">
-                                    $53.000
-                                </div>
-                                <a href="#" class="btn btn-outline-success">Comprar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100 mx-auto" style="width: 18rem;">
-                        <img src="https://cdn.qloud.ar/318/24-07-2026-12-07-43_PCGAMER13180HZ.webp" class="card-img-top"
-                            alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">PC Gamer Ryzen 7</h5>
-                            <p class="card-text">
-                                Pc Gamer Ryzen 7 7800x3d + Rtx 3080 Ti 12gb AM5 + Monitor Teros
-                            </p>
-                            <div class="ac">
-                                <div class="precio">
-                                    $2.600.000
-                                </div>
-                                <a href="#" class="btn btn-outline-success">Comprar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100 mx-auto" style="width: 18rem;">
-                        <img src="https://cdn.v2.tiendanegocio.com/gallery/21528/img_21528_hrcu7ynwmtf7tu6g.png?class=sm"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Mouse Gamer</h5>
-                            <p class="card-text">
-                                Mouse Gamer
-                            </p>
-                            <div class="ac">
-                                <div class="precio">
-                                    $16.000
-                                </div>
-                                <a href="#" class="btn btn-outline-success">Comprar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100 mx-auto" style="width: 18rem;">
-                        <img src="https://acdn-us.mitiendanube.com/stores/817/317/products/joystick-51-41977f90b01c8c81da15984709750861-480-0.webp"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Joystick ps4 inalambrico</h5>
-                            <p class="card-text">
-                                Joystick ps4 inalambrico doubleshock 4 modelo 2020
-                            </p>
-                            <div class="ac">
-                                <div class="precio">
-                                    $43.000
-                                </div>
-                                <a href="#" class="btn btn-outline-success">Comprar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100 mx-auto" style="width: 18rem;">
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_742302-MLA114812161072_082026-O.webp"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Auriculares Gamer</h5>
-                            <p class="card-text">
-                                Auriculares Gamer Kotion con microfono y luz LED
-                            </p>
-                            <div class="ac">
-                                <div class="precio">
-                                    $50.000
-                                </div>
-                                <a href="#" class="btn btn-outline-success">Comprar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100 mx-auto" style="width: 18rem;">
-                        <img src="https://globalecom.ar/wp-content/uploads/2024/11/1.-MPADGAMER-RGB-80X30-768x768.png"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Mouse pad Gamer</h5>
-                            <p class="card-text">
-                                Retro iluminado grande RGB
-                            </p>
-                            <div class="ac">
-                                <div class="precio">
-                                    $12.000
-                                </div>
-                                <a href="#" class="btn btn-outline-success">Comprar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <p>
+                  <strong>Ingredientes:</strong> 30 ml de espresso y 120 ml de leche emulsionada.
+                </p>
+                <p>
+                  <strong>Preparación:</strong> Extrae el espresso en una taza. Calienta y emulsiona la leche creando microbuelas y una capa de crema sedosa. Vierte la leche sobre el café integrando bien el líquido
+                </p>
+              </div>
             </div>
-        </section>
-        <!-- NOSOTROS grid-->
-        <section id="nosotros" class="container">
-            <h2>Sobre nosotros</h2>
-            <div class="row justify-content-center align-items-center g-2">
-                <div class="col-lg-8">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur sapiente minus eum eveniet
-                        dolor, esse expedita enim, minima repudiandae nemo earum! Nemo, impedit laborum voluptate at
-                        repellendus tenetur omnis quaerat.
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus labore est et assumenda,
-                        corrupti accusamus veritatis fuga sit impedit quas enim obcaecati fugiat exercitationem quia
-                        nobis nam libero adipisci? Error?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque praesentium beatae commodi
-                        exercitationem, corporis, quasi at architecto fuga non ab officiis. Ducimus mollitia velit quo
-                        ipsum quidem provident laudantium expedita!
-                    </p>
-                </div>
-                <div class="col-lg-4">
-                    <img src="https://www.clarin.com/2015/03/24/SyWV7bK0Xx_312x240.jpg" alt="">
-                </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                Café cremoso con tres ingredientes
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <p>
+                  <strong>Ingredientes:</strong> Café instantáneo, azúcar y agua (en partes iguales).
+                </p>
+                <p>
+                  <strong>Preparación:</strong> Coloca los ingredientes en un recipiente y bate enérgicamente con una cuchara o batidor hasta conseguir una espuma densa y cremosa. Sírvela sobre una taza de leche fría o caliente.
+                </p>
+              </div>
             </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                Café cremoso con tres ingredientes
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <p>
+                  <strong>Ingredientes:</strong>Café preparado, leche fría, esencia de vainilla, mantequilla de maní y hielo.
+                </p>
+                <p>
+                  <strong>Preparación:</strong> Decora el interior de un vaso con mantequilla de maní y agrega hielo. Mezcla la leche con vainilla y viértela junto con el café frío recién hecho
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- NOSOTROS grid-->
+      <section id="nosotros" class="container">
+        <h2>Sobre nosotros</h2>
+        <div class="row justify-content-center align-items-center g-2">
+          <div class="col-lg-8">
+            <p>
+              Sabemos que la calidad empieza mucho antes de llegar a la taza.
+              Por eso, seleccionamos cuidadosamente cada grano y acompañamos
+              todo el proceso, desde el origen hasta el producto final. Ese
+              conocimiento, sumado a millones de consumidores que nos eligen
+              cada año, nos permite evolucionar junto a sus gustos y nuevas
+              formas de disfrutar el café, manteniendo siempre la calidad que
+              nos distingue.
+            </p>
+            <p>
+              Desarrollamos productos pensados para acompañar distintos gustos,
+              momentos y formas de disfrutar el café. En nuestras sucursales, en
+              casa o donde cada uno elija, trabajamos para acercar siempre la
+              calidad y la experiencia.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <img
+              src="https://cafelab.pe/wp-content/uploads/2024/05/OrigenTostadores_cafelab.pe_-1024x683.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <!-- CONTACTO -->
+      <section id="contacto">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 class="mb-0">Contacto</h4>
+                </div>
+                <div class="card-body">
+                  <form action="#">
+                    <label for="nombre" class="form-label"
+                      >Nombre completo</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombre"
+                      name="nombre"
+                      placeholder="Juan Pérez"
+                      required
+                    />
 
-        </section>
-        <!-- CONTACTO -->
-        <section id="contacto">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="card shadow">
-                            <div class="card-header">
-                                <h4 class="mb-0">Contacto</h4>
-                            </div>
-                            <div class="card-body">
-                                <form action="#">
+                    <label for="email" class="form-label"
+                      >Correo electrónico</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="ejemplo@correo.com"
+                      required
+                    />
 
-                                    <label for="nombre" class="form-label">Nombre completo</label>
-                                    <input type="text" class="form-control" id="nombre" name="nombre"
-                                        placeholder="Juan Pérez" required>
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="telefono"
+                      name="telefono"
+                      placeholder="+54 11 1234-5678"
+                      required
+                    />
 
-                                    <label for="email" class="form-label">Correo electrónico</label>
-                                    <input type="email" class="form-control" id="email" name="email"
-                                        placeholder="ejemplo@correo.com" required>
+                    <label for="motivo" class="form-label"
+                      >Motivo de contacto</label
+                    >
+                    <select
+                      class="form-select"
+                      id="motivo"
+                      name="motivo"
+                      required
+                    >
+                      <option value="" selected disabled>
+                        Selecciona una opción...
+                      </option>
+                      <option value="soporte">Soporte Técnico</option>
+                      <option value="ventas">Ventas y Presupuestos</option>
+                      <option value="sugerencia">Sugerencias</option>
+                      <option value="otro">Otro</option>
+                    </select>
 
-                                    <label for="telefono" class="form-label">Teléfono</label>
-                                    <input type="tel" class="form-control" id="telefono" name="telefono"
-                                        placeholder="+54 11 1234-5678" required>
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea
+                      class="form-control"
+                      id="mensaje"
+                      name="mensaje"
+                      rows="4"
+                      placeholder="Escribe tu mensaje aquí..."
+                      required
+                    ></textarea>
+                    <br />
 
-                                    <label for="motivo" class="form-label">Motivo de contacto</label>
-                                    <select class="form-select" id="motivo" name="motivo" required>
-                                        <option value="" selected disabled>Selecciona una opción...</option>
-                                        <option value="soporte">Soporte Técnico</option>
-                                        <option value="ventas">Ventas y Presupuestos</option>
-                                        <option value="sugerencia">Sugerencias</option>
-                                        <option value="otro">Otro</option>
-                                    </select>
-
-                                    <label for="mensaje" class="form-label">Mensaje</label>
-                                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4"
-                                        placeholder="Escribe tu mensaje aquí..." required></textarea>
-                                    <br>
-
-                                    <div class="d-grid">
-                                        <button type="submit" class="btn btn-secondary">Enviar</button>
-                                    </div>
-
-                                </form>
-                            </div>
-                        </div>
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-secondary">
+                        Enviar
+                      </button>
                     </div>
+                  </form>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+      <!-- slider -->
+      <secction id="final">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0cu3Tks8_9EbsAQiT1pL2aUeSfAO3fwjRzt_uWh0ENKfDkM-DNtTY-dA&s=10"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://gourmitalia.cl/cdn/shop/collections/58afe042829958a978a4a6bf-min_d8f96a05-4789-4a80-8c4a-3d37cd0410cf.png?v=1627313684"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO7eyETFzWokOllqRHFygx0qZ7IU0_iVduqMPclQkPCu8NlmPU1Rgj8js&s=10"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </secction>
     </main>
 
-    <footer class="container-fluid bg-dark text-white">
-        <div class="row justify-content-center align-items-center g-2 row-cols-1 row-cols-md-3">
-            <div class="col text-center">
-                <h2>GameCenter</h2>
-                <h6>2026</h6>
-            </div>
-            <div class="col">
-                <h4>
-                    Redes sociales
-                </h4>
-                <div class="redes">
-                    <i class="bi bi-linkedin"></i>
-                    <i class="bi bi-facebook"></i>
-                    <i class="bi bi-whatsapp"></i>
-                    <i class="bi bi-twitter-x"></i>
-                </div>
-            </div>
-            <div class="col">
-                <h4>Contacto</h4>
-                <p>
-                    gamecenter24@gmail.com
-                </p>
-            </div>
+    <footer class="container-fluid text-white">
+      <div
+        class="row justify-content-center align-items-center g-2 row-cols-1 row-cols-md-3"
+      >
+        <div class="col text-center">
+          <h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="#ffffff"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M80,56V24a8,8,0,0,1,16,0V56a8,8,0,0,1-16,0Zm40,8a8,8,0,0,0,8-8V24a8,8,0,0,0-16,0V56A8,8,0,0,0,120,64Zm32,0a8,8,0,0,0,8-8V24a8,8,0,0,0-16,0V56A8,8,0,0,0,152,64Zm96,56v8a40,40,0,0,1-37.51,39.91,96.59,96.59,0,0,1-27,40.09H208a8,8,0,0,1,0,16H32a8,8,0,0,1,0-16H56.54A96.3,96.3,0,0,1,24,136V88a8,8,0,0,1,8-8H208A40,40,0,0,1,248,120ZM200,96H40v40a80.27,80.27,0,0,0,45.12,72h69.76A80.27,80.27,0,0,0,200,136Zm32,24a24,24,0,0,0-16-22.62V136a95.78,95.78,0,0,1-1.2,15A24,24,0,0,0,232,128Z"
+              ></path>
+            </svg>
+            Coffe World
+          </h3>
+          <h6>2026</h6>
         </div>
-
+        <div class="col">
+          <h4>Redes sociales</h4>
+          <div class="redes">
+            <i class="bi bi-linkedin"></i>
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-whatsapp"></i>
+            <i class="bi bi-twitter-x"></i>
+          </div>
+        </div>
+        <div class="col">
+          <h4>Contacto</h4>
+          <p>coffeworld2026@gmail.com</p>
+        </div>
+      </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

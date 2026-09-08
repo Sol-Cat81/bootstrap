@@ -5,7 +5,14 @@
 }
 
 body{
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(255, 251, 245);
+    color: rgb(39, 39, 39);
+}
+.navbar{
+    background-color: rgb(163, 138, 104);
+}
+.navbar a{
+    color: #ffffff;
 }
 
 section{
@@ -33,6 +40,10 @@ section{
     justify-self: center;
     margin:0px 0px;
 }
+.col .card{
+    color: rgb(39, 39, 39);
+    background-color: white;
+}
 
 .ac{
     display: flex;
@@ -43,6 +54,22 @@ section{
     font-size: 20px;
 }
 
+.accordion-button {
+    background-color: rgb(255, 251, 245);
+}
+.accordion-button:hover {
+    background-color: rgb(163, 138, 104);
+    color: white;
+}
+.accordion-button:active {
+    background-color: rgb(163, 138, 104);
+    color: white;
+}
+.accordion-button:focus {
+    background-color: rgb(163, 138, 104);
+    color: white;
+}
+
 #nosotros{
     background-color: white;
     padding: 20px 30px;
@@ -51,6 +78,15 @@ section{
 #nosotros img{
     width: 100%;
 }
+#final img{
+    filter: brightness(50%);
+}
+
+footer{
+    background-color: rgb(163, 138, 104);
+    padding: 30px;
+}
+
 
 .redes{
     font-size: 25px;
